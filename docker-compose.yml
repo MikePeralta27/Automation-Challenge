@@ -1,0 +1,10 @@
+version: "2.7"
+
+services:
+  cypress:
+    container_name: test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./cypress:/app/cypress

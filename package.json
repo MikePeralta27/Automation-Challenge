@@ -1,0 +1,26 @@
+{
+  "name": "cypress-js-pom-starter",
+  "version": "1.0.0",
+  "description": "GBH Cypress starter project.",
+  "scripts": {
+    "pretest": "rm -rf cypress/reports && mkdir cypress/reports",
+    "cy:open": "npx cypress open",
+    "cy:electron": "npx cypress run --spec 'cypress/e2e/specs/*'",
+    "cy:chrome": "npx cypress run --browser chrome",
+    "lint-check": "npx eslint ./cypress/",
+    "lint-fix": "npx eslint --fix ./cypress/"
+  },
+  "browser": {
+    "framework/selectors": "./framework/selectors.js"
+  },
+  "author": "Edgar Ysabel",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.2.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "playwright-webkit": "^1.28.1",
+    "@cypress/webpack-preprocessor": "^5.15.5"
+  }
+}
